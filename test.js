@@ -10,6 +10,10 @@
 var assert = require('assert');
 var parseSemver = require('./index');
 
+// < v0.12 or iojs
+assert.deepStrictEqual = require('is-equal-shallow');
+
+
 describe('parse-semver:', function() {
   describe('should parse and return object', function() {
     it('with empty `version` property and non-empty `name` property', function(done) {
