@@ -17,7 +17,25 @@
     "type": "git",
     "url": "git://github.com/tunnckoCore/parse-semver.git"
   },
-  "keywords": [],
+  "keywords": [
+    "equal",
+    "helper",
+    "is",
+    "kindof",
+    "normalize",
+    "npm",
+    "object",
+    "parse",
+    "parser",
+    "range",
+    "semver",
+    "shallow",
+    "short",
+    "shorthand",
+    "utils",
+    "validate",
+    "version"
+  ],
   "license": {
     "type": "MIT",
     "url": "https://github.com/tunnckoCore/parse-semver/blob/master/license.md"
