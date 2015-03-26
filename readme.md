@@ -1,6 +1,6 @@
 ## [![npm][npmjs-img]][npmjs-url] [![mit license][license-img]][license-url] [![build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![deps status][daviddm-img]][daviddm-url]
 
-> Parse, normalize and validate given semver shorthand (e.g. gulp@v3.8.10) to object.
+> Parse, normalize and validate given [semver] shorthand (e.g. gulp@v3.8.10) to object.
 
 ## Install
 ```
@@ -9,11 +9,28 @@ npm test
 ```
 
 
-## Usage
+## API
 > For more use-cases see the [tests](./test.js)
 
+### [parseSemver](./index.js#L35)
+> It returns object with `original` version given, expanded semver `range`, and `version`
+which is valid [semver] version.
+
+- `<shorthand>` **{String}** the shorthand to parse, like `mocha@v2.2.0`
+- `return` **{Object}** object with few properties
+
+**Example**
 ```js
 var parseSemver = require('parse-semver');
+
+parseSemver('docks@~3.4.5');
+//=> {name: 'docks', original: '~3.4.5', range: '>=3.4.5 <3.5.0', version: '3.4.5'}
+
+parseSemver('docks@v1.2.3');
+//=> {name: 'docks', original: 'v1.2.3', range: '1.2.3', version: '1.2.3'}
+
+parseSemver('docks');
+//=> {name: 'docks', original: '', range: '*', version: ''}
 ```
 
 
@@ -57,3 +74,5 @@ Released under the [`MIT`][license-url] license.
 ***
 
 _Powered and automated by [kdf](https://github.com/tunnckoCore), March 26, 2015_
+
+[semver]: https://github.com/isaacs/node-semver

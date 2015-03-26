@@ -10,8 +10,24 @@
 var semver = require('semver');
 
 /**
- * Parse semver shorthand to object.
+ * It returns object with `original` version given, expanded semver `range`,
+ * and `version` which is valid [semver] version.
  *
+ * **Example**
+ * ```js
+ * var parseSemver = require('parse-semver');
+ *
+ * parseSemver('docks@~3.4.5');
+ * //=> {name: 'docks', original: '~3.4.5', range: '>=3.4.5 <3.5.0', version: '3.4.5'}
+ *
+ * parseSemver('docks@v1.2.3');
+ * //=> {name: 'docks', original: 'v1.2.3', range: '1.2.3', version: '1.2.3'}
+ *
+ * parseSemver('docks');
+ * //=> {name: 'docks', original: '', range: '*', version: ''}
+ * ```
+ *
+ * @name   parseSemver
  * @param  {String} `<shorthand>` the shorthand to parse, like `mocha@v2.2.0`
  * @return {Object} object with `name` and `version` properties
  * @api public
