@@ -1,6 +1,6 @@
 {
   "name": "parse-semver",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Parse, normalize and validate given semver shorthand (e.g. gulp@v3.8.10) to object.",
   "scripts": {
     "lint": "jshint index.js && jscs index.js --reporter inline",
