@@ -41,7 +41,7 @@
     "url": "https://github.com/tunnckoCore/parse-semver/blob/master/license.md"
   },
   "dependencies": {
-    "semver": "~4.3.1"
+    "semver": "~4.3.3"
   },
   "devDependencies": {
     "is-equal-shallow": "~0.1.1",
