@@ -1,6 +1,6 @@
 {
   "name": "parse-semver",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Parse, normalize and validate given semver shorthand (e.g. gulp@v3.8.10) to object.",
   "repository": "tunnckoCore/parse-semver",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
