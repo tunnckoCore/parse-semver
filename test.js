@@ -50,7 +50,7 @@ test('parse-semver:', function () {
   test('should parse and return object', function () {
     test('with empty `version` property and non-empty `name` property', function (done) {
       var actual = parseSemver('docks')
-      var expected = {name: 'docks', range: '*', version: '', original: ''}
+      var expected = {name: 'docks', range: '*', version: 'latest', original: ''}
 
       test.deepEqual(actual, expected)
       done()

@@ -52,7 +52,7 @@ module.exports = function parseSemver (shorthand) {
   return {
     name: name,
     range: range,
-    version: ver,
+    version: ver.length === 0 ? 'latest' : ver,
     original: version
   }
 }
