@@ -17,7 +17,7 @@ npm test
 
 ### [parseSemver](./index.js#L40)
 > It returns object with `original` version given, expanded semver `range`, and `version`
-which is valid [semver] version.
+which is valid [semver](http://npm.im/semver) version.
 
 - `<shorthand>` **{String}** the shorthand to parse, like `docks@v2.2.0`
 - `return` **{Object}** object with few properties
@@ -39,6 +39,14 @@ parseSemver('docks@^2.2.2')
 parseSemver('docks')
 //=> {name: 'docks', original: '', range: '*', version: 'latest'}
 ```
+
+
+## Related
+- [benz](https://github.com/tunnckocore/benz): Compose your control flow with absolute elegance. Support async/await, callbacks, thunks, generators,… [more](https://github.com/tunnckocore/benz)
+- [parse-git-log](https://github.com/tunnckoCore/parse-git-log): Parse default `git log` style to array of objects from git repository… [more](https://github.com/tunnckoCore/parse-git-log)
+- [parse-github-url](https://github.com/jonschlinkert/parse-github-url): Parse a github URL into an object.
+- [parse-git-config](https://github.com/jonschlinkert/parse-git-config): Parse `.git/config` into a JavaScript object. sync or async.
+- [vez](https://github.com/tunnckocore/vez): Middleware composition at new level. Ultimate alternative to `ware`, `plugins`, `koa-compose` and… [more](https://github.com/tunnckocore/vez)
 
 
 ## Contributing
