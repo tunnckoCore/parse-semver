@@ -15,7 +15,7 @@ npm test
 ## API
 > For more use-cases see the [tests](./test.js)
 
-### [parseSemver](./index.js#L36)
+### [parseSemver](./index.js#L40)
 > It returns object with `original` version given, expanded semver `range`, and `version`
 which is valid [semver] version.
 
@@ -32,6 +32,9 @@ parseSemver('docks@~3.4.5')
 
 parseSemver('docks@v1.2.3')
 //=> {name: 'docks', original: 'v1.2.3', range: '1.2.3', version: '1.2.3'}
+
+parseSemver('docks@^2.2.2')
+//=> {name: 'docks', original: '^2.2.2', range: '>=2.2.2 <3.0.0', version: '2.2.2'}
 
 parseSemver('docks')
 //=> {name: 'docks', original: '', range: '*', version: 'latest'}

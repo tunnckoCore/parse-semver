@@ -14,6 +14,7 @@ var semver = require('semver')
  * and `version` which is valid [semver] version.
  *
  * **Example**
+ *
  * ```js
  * var parseSemver = require('parse-semver')
  *
@@ -23,8 +24,11 @@ var semver = require('semver')
  * parseSemver('docks@v1.2.3')
  * //=> {name: 'docks', original: 'v1.2.3', range: '1.2.3', version: '1.2.3'}
  *
+ * parseSemver('docks@^2.2.2')
+ * //=> {name: 'docks', original: '^2.2.2', range: '>=2.2.2 <3.0.0', version: '2.2.2'}
+ *
  * parseSemver('docks')
- * //=> {name: 'docks', original: '', range: '*', version: ''}
+ * //=> {name: 'docks', original: '', range: '*', version: 'latest'}
  * ```
  *
  * @name   parseSemver
