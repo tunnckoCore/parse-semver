@@ -1,13 +1,14 @@
 
 
-## v1.0.1 / April 17, 2015
+## 1.0.1 / 2015-04-17
+- Release v1.0.1 / npm@v1.0.1
 - bump semver@~4.3.3
 
-## v1.0.0 / March 26, 2015
+## 1.0.0 / 2015-03-26
 - Release v1.0.0 / npm@v1.0.0
 - run keywords(1)
 - run docks(1)
 - **update** deps, polyfill
 
-## v0.0.0 / March 26, 2015
+## 0.0.0 / 2015-03-26
 - first commits / npm@v0.0.0

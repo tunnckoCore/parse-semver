@@ -1,13 +1,13 @@
-/**
+/*!
  * parse-semver <https://github.com/tunnckoCore/parse-semver>
  *
- * Copyright (c) 2015 Charlike Mike Reagent, contributors.
+ * Copyright (c) 2015 Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)
  * Released under the MIT license.
  */
 
-'use strict';
+'use strict'
 
-var semver = require('semver');
+var semver = require('semver')
 
 /**
  * It returns object with `original` version given, expanded semver `range`,
@@ -15,15 +15,15 @@ var semver = require('semver');
  *
  * **Example**
  * ```js
- * var parseSemver = require('parse-semver');
+ * var parseSemver = require('parse-semver')
  *
- * parseSemver('docks@~3.4.5');
+ * parseSemver('docks@~3.4.5')
  * //=> {name: 'docks', original: '~3.4.5', range: '>=3.4.5 <3.5.0', version: '3.4.5'}
  *
- * parseSemver('docks@v1.2.3');
+ * parseSemver('docks@v1.2.3')
  * //=> {name: 'docks', original: 'v1.2.3', range: '1.2.3', version: '1.2.3'}
  *
- * parseSemver('docks');
+ * parseSemver('docks')
  * //=> {name: 'docks', original: '', range: '*', version: ''}
  * ```
  *
@@ -32,25 +32,27 @@ var semver = require('semver');
  * @return {Object} object with `name` and `version` properties
  * @api public
  */
-module.exports = function parseSemver(shorthand) {
+
+module.exports = function parseSemver (shorthand) {
   if (typeof shorthand !== 'string') {
-    throw new TypeError('[parse-semver] expect `shorthand` to be string');
+    throw new TypeError('parse-semver: expect `shorthand` to be string')
   }
 
-  shorthand = shorthand.split('@');
+  shorthand = shorthand.split('@')
 
-  var name = shorthand[0];
-  var version = shorthand[1] || '';
-  var range = semver.validRange(version) || '';
+  var name = shorthand[0]
+  var version = shorthand[1] || ''
+  var range = semver.validRange(version) || ''
 
   if (version.length && range.length === 0) {
-    throw new Error('[parse-semver] not valid semver range/version given');
+    throw new Error('parse-semver: not valid semver range/version given')
   }
 
+  var ver = version.replace(/^[^0-9]+/, '')
   return {
     name: name,
     range: range,
-    version: version.replace(/^[^0-9]+/, ''),
+    version: ver,
     original: version
-  };
-};
+  }
+}
