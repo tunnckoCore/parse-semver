@@ -1,5 +1,11 @@
 
 
+## 1.1.1 / 2016-02-23
+- Release v1.1.1 / npm@v1.1.1
+- update license year
+- update semver to `^5.1.0`
+- add support for scoped shorthands e.g. `@user/package@~2.2.5` (PR [#2](https://github.com/tunnckoCore/parse-semver/pull/2 "Support scoped packages"))
+
 ## 1.1.0 / 2015-07-19
 - Release v1.1.0 / npm@v1.1.0
 - add related section
