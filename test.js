@@ -62,6 +62,20 @@ test('parse-semver:', function () {
       test.deepEqual(actual, expected)
       done()
     })
+    test('with scoped package name', function (done) {
+      var actual = parseSemver('@me/docks@7.8.9')
+      var expected = {name: '@me/docks', range: '7.8.9', version: '7.8.9', original: '7.8.9'}
+
+      test.deepEqual(actual, expected)
+      done()
+    })
+    test('with scoped package name and empty `version`', function (done) {
+      var actual = parseSemver('@me/docks')
+      var expected = {name: '@me/docks', range: '*', version: 'latest', original: ''}
+
+      test.deepEqual(actual, expected)
+      done()
+    })
   })
   test('should parse, validate and normalize', function () {
     test('given `v1.2.3` version to `1.2.3`', function (done) {

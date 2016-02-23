@@ -44,6 +44,11 @@ module.exports = function parseSemver (shorthand) {
 
   shorthand = shorthand.split('@')
 
+  if (shorthand[0] === '') {
+    shorthand.shift()
+    shorthand[0] = '@' + shorthand[0]
+  }
+
   var name = shorthand[0]
   var version = shorthand[1] || ''
   var range = semver.validRange(version) || ''
