@@ -10,7 +10,7 @@
     "test": "standard && node test.js"
   },
   "dependencies": {
-    "semver": "~5.0.1"
+    "semver": "^5.1.0"
   },
   "devDependencies": {
     "assertit": "^0.1.0"
